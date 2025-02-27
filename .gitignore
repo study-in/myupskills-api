@@ -1,0 +1,11 @@
+node_modules
+
+.env
+.vercel
+
+uploadFile
+dist
+logs/winston
+
+yarn.lock
+package.lock.json
