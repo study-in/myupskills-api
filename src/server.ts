@@ -45,7 +45,7 @@ for (const iface of Object.values(os.networkInterfaces())) {
 async function connection() {
   try {
     await mongoose.connect(config.database_url as string, {
-      dbName: 'Ready-Server',
+      dbName: 'MyUpSkills',
     });
     config.env === 'production'
       ? logger.info(`Database connection successful.`.green.underline.bold)
