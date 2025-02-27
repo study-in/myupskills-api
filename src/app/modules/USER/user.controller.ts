@@ -13,7 +13,6 @@ import httpStatus from 'http-status';
 import bcrypt from 'bcrypt';
 import config from '../../../config';
 
-
 const createUser = catchAsync(async (req: Request, res: Response) => {
   const { ...user } = req.body;
   // console.log(user, 'from controller=================');
@@ -96,7 +95,6 @@ const myProfileController = catchAsync(async (req: Request, res: Response) => {
 
   const result = await UserService.myProfileServices(id);
 
-
   sendResponse<Partial<IUser>>(res, {
     statusCode: 200,
     success: true,
@@ -125,11 +123,9 @@ const updateMyProfile = catchAsync(async (req: Request, res: Response) => {
 
   const updatedData = req.body;
 
-  const newUpdateData = updatedData
-
+  const newUpdateData = updatedData;
 
   newUpdateData.password = await bcrypt.hash(updatedData?.password, Number(10));
-
 
   const result = await UserService.updateMyProfile(id, newUpdateData);
 

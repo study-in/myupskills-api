@@ -29,18 +29,17 @@ const auth =
           token,
           config.jwt.secret as Secret
         );
-        
+
         // eslint-disable-next-line no-console
         // console.log(verifyUser, 'verifyUser');
         //set user to headers
         req.user = verifyUser;
         // console.log(verifyUser, 'verifyUser');
         const isExist = await User.findOne({
-         
           is_active: true,
           $or: [
             { _id: new Types.ObjectId(verifyUser._id) },
-            { _id: new Types.ObjectId(verifyUser.id)  },
+            { _id: new Types.ObjectId(verifyUser.id) },
           ],
         });
 

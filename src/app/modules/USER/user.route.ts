@@ -12,7 +12,7 @@ const router = express.Router();
 router.post(
   '/create-user',
   validateRequest(UserValidation.createUserZodSchema),
-  auth(ENUM_USER_ROLE.ADMIN),
+  // auth(ENUM_USER_ROLE.ADMIN),
   userController.createUser
 );
 router.get(
@@ -23,9 +23,11 @@ router.get(
 
 router.get('/:id', auth(ENUM_USER_ROLE.ADMIN), userController.getSingleUser);
 
-router.get('/', 
-  // auth(ENUM_USER_ROLE.ADMIN), 
-  userController.getALLUser);
+router.get(
+  '/',
+  // auth(ENUM_USER_ROLE.ADMIN),
+  userController.getALLUser
+);
 
 router.delete('/:id', auth(ENUM_USER_ROLE.ADMIN), userController.deleteUser);
 

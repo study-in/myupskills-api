@@ -4,7 +4,6 @@ import config from '../config';
 
 import { swaggerDefinition, swaggerTags } from './swagger.utils';
 
-
 const options: swaggerJsdoc.Options = {
   definition: {
     openapi: '3.0.0',
@@ -13,21 +12,21 @@ const options: swaggerJsdoc.Options = {
       version: '1.0.0',
       description: `Api Design of ${config.server_name}`,
       contact: {
-        name: 'Sarwar Hossain [Spark Tech Agency]',
-        email: 'sarwarasik@gmail.com',
-        url: 'https://www.linkedin.com/in/sarwar-asik/',
+        name: 'Faysal Hossain',
+        email: 'f4faysals@gmail.com',
+        url: 'https://www.linkedin.com/in/f4faysal/',
       },
       license: {
         name: 'Company',
-        url: 'https://sparktech.agency/',
+        url: 'https://www.linkedin.com/in/f4faysal/',
       },
     },
     servers: [
       {
-        url: "http://localhost:5003",
+        url: 'http://localhost:5003',
       },
       {
-        url: "http://54.157.71.177:5003",
+        url: 'http://54.157.71.177:5003',
       },
     ],
     components: {
@@ -53,9 +52,9 @@ const options: swaggerJsdoc.Options = {
 // ! swagger UI customization sections
 export const swaggerUiOptions = {
   explorer: true,
-    tagsSorter: 'alpha', // Sort tags alphabetically
-    operationsSorter: 'alpha',
-    customSiteTitle: `${config.server_name} API Docs`,
+  tagsSorter: 'alpha', // Sort tags alphabetically
+  operationsSorter: 'alpha',
+  customSiteTitle: `${config.server_name} API Docs`,
   // customfavIcon: '/uploadFile/images/default/ready-fav.png',
   customCss: `
       .swagger-ui .topbar { 
@@ -82,11 +81,10 @@ export const swaggerUiOptions = {
     }
   `,
   docExpansion: 'none',
-  defaultModelsExpandDepth:2,
+  defaultModelsExpandDepth: 2,
   swaggerOptions: {
     // docExpansion: 'none', // Collapses the routes by default
     persistAuthorization: true,
-
   },
 };
 
