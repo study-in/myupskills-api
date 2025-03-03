@@ -18,8 +18,6 @@ const createUserZodSchema = z.object({
   }),
 });
 
-
-
 const updateUserZodSchema = z.object({
   body: z.object({
     role: z
